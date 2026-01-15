@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meetia - Réunions transformées en actions | BOOSTLY AI</title>
+    <meta name="description" content="Enregistrez vos réunions, obtenez un résumé structuré avec décisions prises et actions assignées automatiquement. Fini les notes perdues.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎯</text></svg>">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/boostly.css">
+    <link rel="stylesheet" href="css/product-page.css">
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav class="boostly-nav">
+        <div class="nav-content">
+            <a href="index.html" class="nav-logo">
+                <span class="nav-logo-icon">🤖</span>
+                <span class="gradient-text">BOOSTLY AI</span>
+            </a>
+
+            <div class="nav-products">
+                <a href="vocalia.html" class="product-nav-link vocalia" data-i18n="common.nav.vocalia">Vocalia</a>
+                <a href="meetia.html" class="product-nav-link meetia" style="font-weight: 600;" data-i18n="common.nav.meetia">Meetia</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="faq.html" style="text-decoration: none; color: var(--gray-700); font-size: var(--text-sm);" data-i18n="common.nav.faq">FAQ</a>
+
+                <!-- Language Selector -->
+                <div class="language-selector-vitrine">
+                    <button class="language-btn-vitrine" id="currentLanguageBtnVitrine" onclick="toggleLanguageDropdownVitrine()">
+                        <span id="currentFlagVitrine">🇫🇷</span>
+                        <span id="currentLangCodeVitrine">FR</span>
+                        <span class="arrow">▼</span>
+                    </button>
+                    <div class="language-dropdown-vitrine" id="languageDropdownVitrine" style="display: none;">
+                        <div class="language-option-vitrine" onclick="changeLanguageVitrine('fr')">
+                            <span>🇫🇷</span>
+                            <span>Français</span>
+                        </div>
+                        <div class="language-option-vitrine" onclick="changeLanguageVitrine('en')">
+                            <span>🇬🇧</span>
+                            <span>English</span>
+                        </div>
+                        <div class="language-option-vitrine" onclick="changeLanguageVitrine('cn')">
+                            <span>🇨🇳</span>
+                            <span>中文</span>
+                        </div>
+                        <div class="language-option-vitrine" onclick="changeLanguageVitrine('jp')">
+                            <span>🇯🇵</span>
+                            <span>日本語</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO PRODUIT -->
+    <section class="product-hero meetia">
+        <div class="container">
+            <div class="product-hero-content">
+                <div class="product-hero-text">
+                    <div class="product-breadcrumb">
+                        <a href="index.html">BOOSTLY AI</a>
+                        <span>→</span>
+                        <span data-i18n="common.nav.meetia">Meetia</span>
+                    </div>
+
+                    <div class="product-logo">
+                        <div class="product-logo-icon">🎯</div>
+                        <h1 class="product-name gradient-text-meetia">Meetia</h1>
+                    </div>
+
+                    <h2 class="product-hero-title" data-i18n="meetia.hero.title">
+                        Vos réunions deviennent des actions concrètes
+                    </h2>
+
+                    <p class="product-hero-subtitle" data-i18n="meetia.hero.subtitle">
+                        Enregistrez vos réunions, Meetia génère un résumé structuré avec les décisions prises et les actions à réaliser. Plus besoin de prendre des notes.
+                    </p>
+
+                    <div class="product-hero-cta">
+                        <button onclick="showComingSoonMessage()" class="product-cta-primary" style="cursor: pointer; border: none;">
+                            <span data-i18n="meetia.hero.button">⚙️ Bientôt disponible</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-hero-visual">
+                    <div class="product-demo-mockup">
+                        <div style="text-align: center; padding: var(--space-2xl);">
+                            <div style="font-size: 72px; margin-bottom: var(--space-lg);">📊</div>
+                            <div style="font-size: var(--text-lg); font-weight: var(--font-semibold); margin-bottom: var(--space-md); color: var(--gray-900);" data-i18n="meetia.demo.title">Réunion Stratégie Q1</div>
+                            <div style="display: inline-flex; align-items: center; gap: var(--space-sm); padding: var(--space-sm) var(--space-md); background: var(--meetia-light); border-radius: var(--radius-full); color: var(--meetia-primary); font-size: var(--text-sm); font-weight: var(--font-medium);">
+                                <span>✓</span>
+                                <span data-i18n="meetia.demo.actions">5 actions assignées</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROBLÈME MÉTIER -->
+    <section class="problem-metier">
+        <div class="container">
+            <div class="problem-metier-content">
+                <h2 class="problem-metier-title" data-i18n="meetia.problem.title">
+                    Vos réunions durent des heures mais les actions se perdent ?
+                </h2>
+
+                <p class="problem-metier-description" data-i18n="meetia.problem.description">
+                    Vous passez 30% de votre temps en réunion, mais entre les notes manuscrites dispersées, les décisions floues et les actions non assignées, le suivi devient un cauchemar.
+                </p>
+
+                <div class="problem-stats">
+                    <div class="problem-stat">
+                        <div class="problem-stat-icon">⏱️</div>
+                        <div class="problem-stat-value" data-i18n="meetia.problem.stat1.value">30min</div>
+                        <div class="problem-stat-label" data-i18n="meetia.problem.stat1.label">Rédaction CR manuel</div>
+                    </div>
+                    <div class="problem-stat">
+                        <div class="problem-stat-icon">📋</div>
+                        <div class="problem-stat-value" data-i18n="meetia.problem.stat2.value">40%</div>
+                        <div class="problem-stat-label" data-i18n="meetia.problem.stat2.label">Actions non suivies</div>
+                    </div>
+                    <div class="problem-stat">
+                        <div class="problem-stat-icon">🎯</div>
+                        <div class="problem-stat-value" data-i18n="meetia.problem.stat3.value">20+</div>
+                        <div class="problem-stat-label" data-i18n="meetia.problem.stat3.label">Réunions/mois</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FONCTIONNEMENT -->
+    <section class="fonctionnement meetia">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="meetia.howto.title">Comment ça marche ?</h2>
+                <p class="section-subtitle" data-i18n="meetia.howto.subtitle">De la réunion à l'action en 4 étapes</p>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">🎙️</div>
+                    <h3 class="step-title" data-i18n="meetia.step1.title">Enregistrez</h3>
+                    <p class="step-description" data-i18n="meetia.step1.description">
+                        Lancez l'enregistrement au début de votre réunion (Zoom, Teams, présentiel). Meetia capture tout.
+                    </p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">🤖</div>
+                    <h3 class="step-title" data-i18n="meetia.step2.title">L'IA analyse</h3>
+                    <p class="step-description" data-i18n="meetia.step2.description">
+                        Transcription automatique avec identification des participants, sujets abordés et temps de parole.
+                    </p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">📝</div>
+                    <h3 class="step-title" data-i18n="meetia.step3.title">Extrait</h3>
+                    <p class="step-description" data-i18n="meetia.step3.description">
+                        L'IA identifie automatiquement : points clés, décisions, actions à faire, responsables, deadlines.
+                    </p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-icon">✅</div>
+                    <h3 class="step-title" data-i18n="meetia.step4.title">Actions prêtes</h3>
+                    <p class="step-description" data-i18n="meetia.step4.description">
+                        Résumé structuré envoyé par email. Actions synchronisées avec vos outils (Notion, Asana, Trello).
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FONCTIONNALITÉS -->
+    <section class="features-product meetia">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="meetia.features.title">Fonctionnalités Meetia</h2>
+                <p class="section-subtitle" data-i18n="meetia.features.subtitle">Tout pour transformer vos réunions en résultats</p>
+            </div>
+
+            <div class="features-grid-product">
+                <div class="feature-card-product">
+                    <div class="feature-icon-product">👥</div>
+                    <div class="feature-content-product">
+                        <h3 class="feature-title-product" data-i18n="meetia.feature1.title">Identification participants</h3>
+                        <p class="feature-description-product" data-i18n="meetia.feature1.description">
+                            Reconnaissance automatique des intervenants. Temps de parole par personne, qui a dit quoi, attribution des actions.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="feature-card-product">
+                    <div class="feature-icon-product">🎯</div>
+                    <div class="feature-content-product">
+                        <h3 class="feature-title-product" data-i18n="meetia.feature2.title">Extraction actions</h3>
+                        <p class="feature-description-product" data-i18n="meetia.feature2.description">
+                            L'IA détecte automatiquement les actions décidées, assigne les responsables et extrait les deadlines mentionnées.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="feature-card-product">
+                    <div class="feature-icon-product">📊</div>
+                    <div class="feature-content-product">
+                        <h3 class="feature-title-product" data-i18n="meetia.feature3.title">Résumé structuré</h3>
+                        <p class="feature-description-product" data-i18n="meetia.feature3.description">
+                            Compte-rendu organisé : contexte, points abordés, décisions prises, actions assignées, prochaines étapes.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="feature-card-product">
+                    <div class="feature-icon-product">🔗</div>
+                    <div class="feature-content-product">
+                        <h3 class="feature-title-product" data-i18n="meetia.feature4.title">Intégrations outils</h3>
+                        <p class="feature-description-product" data-i18n="meetia.feature4.description">
+                            Synchronisation automatique avec Notion, Asana, Trello, Jira, Linear. Les actions apparaissent directement dans vos boards.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="feature-card-product">
+                    <div class="feature-icon-product">🎥</div>
+                    <div class="feature-content-product">
+                        <h3 class="feature-title-product" data-i18n="meetia.feature5.title">Compatible visio</h3>
+                        <p class="feature-description-product" data-i18n="meetia.feature5.description">
+                            Intégration Zoom, Teams, Google Meet. Plugin Chrome pour enregistrer directement depuis votre navigateur.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="feature-card-product">
+                    <div class="feature-icon-product">📧</div>
+                    <div class="feature-content-product">
+                        <h3 class="feature-title-product" data-i18n="meetia.feature6.title">Distribution automatique</h3>
+                        <p class="feature-description-product" data-i18n="meetia.feature6.description">
+                            Envoi du résumé par email à tous les participants. Rappels automatiques pour les actions en retard.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="product-final-cta meetia">
+        <div class="container">
+            <h2 class="product-final-cta-title" data-i18n="meetia.cta.title">
+                Prêt à ne plus perdre une seule décision ?
+            </h2>
+            <p class="product-final-cta-subtitle" data-i18n="meetia.cta.subtitle">
+                Rejoignez les équipes qui ont déjà transformé leurs réunions en actions mesurables
+            </p>
+            <a href="../MEETIA/login.html" class="product-final-cta-button">
+                <span data-i18n="meetia.cta.button">Commencer gratuitement</span>
+                <span>→</span>
+            </a>
+            <div style="margin-top: var(--space-lg); color: rgba(255, 255, 255, 0.9); font-size: var(--text-sm);" data-i18n="meetia.cta.features">
+                ✅ Gratuit pendant 14 jours • ✅ Sans carte bancaire • ✅ Annulable à tout moment
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <span>🤖</span>
+                    <span class="gradient-text">BOOSTLY AI</span>
+                </div>
+                <p class="footer-tagline" data-i18n="common.footer.tagline">
+                    La suite d'agents IA spécialisés qui automatise vos tâches répétitives.
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h4 data-i18n="common.footer.products">Produits</h4>
+                <a href="vocalia.html">Vocalia</a>
+                <a href="meetia.html">Meetia</a>
+            </div>
+
+            <div class="footer-section">
+                <h4 data-i18n="common.footer.support">Support</h4>
+                <a href="faq.html" data-i18n="common.nav.faq">FAQ</a>
+                <a href="mailto:contact@boostly.ai" data-i18n="common.footer.contact">Contact</a>
+            </div>
+
+            <div class="footer-section">
+                <h4 data-i18n="common.footer.legal">Légal</h4>
+                <a href="privacy.html" data-i18n="common.footer.privacy">Confidentialité</a>
+                <a href="terms.html" data-i18n="common.footer.terms">CGU</a>
+                <a href="legal.html" data-i18n="common.footer.mentions">Mentions légales</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p data-i18n="common.footer.copyright">&copy; 2025 BOOSTLY AI. Tous droits réservés.</p>
+            <p data-i18n="common.footer.made">Fait avec ❤️ en France</p>
+        </div>
+    </footer>
+
+    <!-- i18n System -->
+    <script src="js/translations-vitrine.js"></script>
+    <script src="js/language-manager-vitrine.js"></script>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+
+    <script>
+        // Initialisation du language manager
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentLang = window.languageManager.init();
+            window.languageManager.updateUI();
+            console.log('✅ Meetia chargé en', currentLang);
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

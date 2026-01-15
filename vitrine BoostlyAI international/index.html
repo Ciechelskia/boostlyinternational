@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOSTLY AI - Agents IA spécialisés pour professionnels</title>
+    <meta name="description" content="Automatisez vos tâches répétitives avec des agents IA spécialisés. Gagnez des heures chaque semaine. Plans FREE et PRO disponibles.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/boostly.css">
+    <style>
+        /* Alternance fond blanc/gris pour délimiter les sections */
+        .section-white {
+            background: white;
+        }
+        
+        .section-gray {
+            background: var(--gray-50);
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav class="boostly-nav">
+        <div class="nav-content">
+            <a href="index.html" class="nav-logo">
+                <span class="nav-logo-icon">🤖</span>
+                <span class="gradient-text">BOOSTLY AI</span>
+            </a>
+            
+            <div class="nav-products">
+                <a href="vocalia.html" class="product-nav-link vocalia">Vocalia</a>
+                <a href="meetia.html" class="product-nav-link meetia">Meetia</a>
+            </div>
+            
+            <div class="nav-actions">
+                <a href="faq.html" style="text-decoration: none; color: var(--gray-700); font-size: var(--text-sm);" data-i18n="common.nav.faq">FAQ</a>
+                
+                <!-- Sélecteur de langue -->
+                <div class="language-selector-vitrine">
+                    <button class="language-btn-vitrine" id="currentLanguageBtnVitrine" onclick="toggleLanguageDropdownVitrine()">
+                        <span id="currentFlagVitrine">🇫🇷</span>
+                        <span id="currentLangCodeVitrine">FR</span>
+                        <span class="arrow">▼</span>
+                    </button>
+                    
+                    <div class="language-dropdown-vitrine" id="languageDropdownVitrine" style="display: none;">
+                        <button class="lang-option-vitrine" onclick="changeLanguageVitrine('fr')">
+                            🇫🇷 <span>Français</span>
+                        </button>
+                        <button class="lang-option-vitrine" onclick="changeLanguageVitrine('en')">
+                            🇬🇧 <span>English</span>
+                        </button>
+                        <button class="lang-option-vitrine" onclick="changeLanguageVitrine('cn')">
+                            🇨🇳 <span>中文</span>
+                        </button>
+                        <button class="lang-option-vitrine" onclick="changeLanguageVitrine('jp')">
+                            🇯🇵 <span>日本語</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <a href="#agents" class="btn-demo" data-i18n="common.nav.discover">Découvrir</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero section-gray" style="background: var(--gray-50);">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="hero-badge-icon">🚀</span>
+                <span data-i18n="index.hero.badge">Nouvelle génération d'agents IA spécialisés</span>
+            </div>
+            
+            <h1 class="hero-title">
+                <span data-i18n="index.hero.title.part1">Gagnez des heures chaque semaine,</span><br>
+                <span class="gradient-text" data-i18n="index.hero.title.part2">concentrez-vous sur ce qui compte</span>
+            </h1>
+            
+            <p class="hero-subtitle" data-i18n="index.hero.subtitle">
+                Des agents IA spécialisés qui automatisent vos tâches répétitives et vous font gagner un temps précieux. Commencez gratuitement.
+            </p>
+            
+            <div class="hero-cta">
+                <a href="#agents" class="cta-primary">
+                    <span data-i18n="index.hero.cta">Découvrir les agents</span>
+                    <span>→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROBLÈME SECTION -->
+    <section class="problem-section section-white">
+        <div class="container">
+            <div class="problem-content">
+                <h2 class="problem-title" data-i18n="index.problem.title">
+                    Les tâches répétitives vous volent votre temps
+                </h2>
+                
+                <div class="problem-list">
+                    <div class="problem-item">
+                        <span class="problem-icon">⏱️</span>
+                        <div class="problem-text">
+                            <strong data-i18n="index.problem.item1.title">Temps perdu sur les comptes-rendus</strong>
+                            <p data-i18n="index.problem.item1.desc">Vous passez des heures à rédiger des rapports alors que l'information existe déjà dans vos conversations.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="problem-item">
+                        <span class="problem-icon">🧠</span>
+                        <div class="problem-text">
+                            <strong data-i18n="index.problem.item2.title">Informations perdues ou oubliées</strong>
+                            <p data-i18n="index.problem.item2.desc">Les détails importants se perdent entre la discussion et la rédaction finale du rapport.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="problem-item">
+                        <span class="problem-icon">📋</span>
+                        <div class="problem-text">
+                            <strong data-i18n="index.problem.item3.title">Actions non suivies</strong>
+                            <p data-i18n="index.problem.item3.desc">Les décisions prises en réunion ou consultation ne sont pas toujours transformées en plan d'action clair.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="margin-top: var(--space-3xl); text-align: center;">
+                    <p style="font-size: var(--text-xl); color: var(--gray-700); font-weight: var(--font-semibold);">
+                        ➡️ <span class="gradient-text">BOOSTLY</span> <span data-i18n="index.problem.solution">= La couche d'intelligence qui transforme vos données en actions</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOSTLY C'EST QUOI ? (STORYTELLING AU "NOUS") -->
+    <section class="problem-section section-gray" style="padding: var(--space-4xl) 0;">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <h2 class="section-title" style="margin-bottom: var(--space-xl);" data-i18n="index.about.title">BOOSTLY, c'est quoi ?</h2>
+                
+                <div style="font-size: 60px; margin-bottom: var(--space-lg);">💡</div>
+                
+                <p style="font-size: var(--text-lg); color: var(--gray-700); line-height: 1.8; margin-bottom: var(--space-lg);">
+                    <span data-i18n="index.about.p1">BOOSTLY est né d'une frustration simple :</span> <strong data-i18n="index.about.p1.bold">pourquoi perdre des heures sur des tâches répétitives alors que l'IA peut les faire mieux et plus vite ?</strong>
+                </p>
+                
+                <p style="font-size: var(--text-lg); color: var(--gray-700); line-height: 1.8; margin-bottom: var(--space-lg);" data-i18n="index.about.p2">
+                    Nous sommes deux passionnés d'intelligence artificielle et d'entrepreneuriat qui avons décidé de créer une plateforme d'agents IA spécialisés pour résoudre des problèmes métier concrets.
+                </p>
+                
+                <p style="font-size: var(--text-lg); color: var(--gray-700); line-height: 1.8; margin-bottom: var(--space-lg);">
+                    <span data-i18n="index.about.p3">Notre mission :</span> <strong data-i18n="index.about.p3.bold">rendre l'IA accessible et utile au quotidien, sans jargon technique, sans courbe d'apprentissage.</strong>
+                </p>
+                
+                <p style="font-size: var(--text-lg); color: var(--gray-700); line-height: 1.8; margin-bottom: var(--space-lg);">
+                    <span data-i18n="index.about.p4">Chaque agent BOOSTLY est entraîné pour un cas d'usage précis :</span> <strong data-i18n="index.about.p4.bold">transformer vos vocaux en rapports pros, générer des comptes-rendus de réunion structurés, automatiser la création de contenus...</strong>
+                </p>
+                
+                <p style="font-size: var(--text-xl); color: var(--gray-900); font-weight: var(--font-semibold); line-height: 1.6;" data-i18n="index.about.p5">
+                    Vous gagnez du temps, vous vous concentrez sur ce qui compte vraiment, et l'IA s'occupe du reste.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- AGENTS SECTION -->
+    <section id="agents" class="agents-section section-white" style="background: white;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="index.agents.title">Découvrez nos agents IA spécialisés</h2>
+                <p class="section-subtitle" data-i18n="index.agents.subtitle">
+                    Chaque agent maîtrise parfaitement son domaine
+                </p>
+            </div>
+            
+            <div class="agents-grid">
+                <!-- VOCALIA -->
+                <a href="vocalia.html" class="agent-card vocalia">
+                    <div class="agent-header">
+                        <div class="agent-icon">📋</div>
+                        <div>
+                            <h3 class="agent-name" data-i18n="index.agent.vocalia.name">Vocalia</h3>
+                            <p class="agent-tagline" data-i18n="index.agent.vocalia.tagline">Du vocal au rapport pro en 2 min</p>
+                        </div>
+                    </div>
+                    
+                    <p class="agent-description" data-i18n="index.agent.vocalia.desc">
+                        Transformez vos enregistrements vocaux en rapports structurés et professionnels. Dictez, l'IA rédige.
+                    </p>
+                    
+                    <div class="agent-features">
+                        <div class="agent-feature">
+                            <span class="agent-feature-icon">✓</span>
+                            <span data-i18n="index.agent.vocalia.feature1">Transcription IA ultra-précise</span>
+                        </div>
+                        <div class="agent-feature">
+                            <span class="agent-feature-icon">✓</span>
+                            <span data-i18n="index.agent.vocalia.feature2">Structuration automatique</span>
+                        </div>
+                        <div class="agent-feature">
+                            <span class="agent-feature-icon">✓</span>
+                            <span data-i18n="index.agent.vocalia.feature3">Export PDF professionnel</span>
+                        </div>
+                    </div>
+                    
+                    <div class="agent-cta">
+                        <span data-i18n="index.agent.vocalia.cta">Essayer Vocalia</span>
+                        <span>→</span>
+                    </div>
+                </a>
+
+                <!-- MEETIA -->
+                <a href="meetia.html" class="agent-card meetia">
+                    <div class="agent-header">
+                        <div class="agent-icon">🎯</div>
+                        <div>
+                            <h3 class="agent-name" data-i18n="index.agent.meetia.name">Meetia</h3>
+                            <p class="agent-tagline" data-i18n="index.agent.meetia.tagline">Réunions → Actions concrètes</p>
+                        </div>
+                    </div>
+                    
+                    <p class="agent-description" data-i18n="index.agent.meetia.desc">
+                        Enregistrez vos réunions et obtenez un résumé structuré avec décisions prises et actions à réaliser.
+                    </p>
+                    
+                    <div class="agent-features">
+                        <div class="agent-feature">
+                            <span class="agent-feature-icon">✓</span>
+                            <span data-i18n="index.agent.meetia.feature1">Résumé automatique de réunion</span>
+                        </div>
+                        <div class="agent-feature">
+                            <span class="agent-feature-icon">✓</span>
+                            <span data-i18n="index.agent.meetia.feature2">Extraction des décisions clés</span>
+                        </div>
+                        <div class="agent-feature">
+                            <span class="agent-feature-icon">✓</span>
+                            <span data-i18n="index.agent.meetia.feature3">Plan d'action généré</span>
+                        </div>
+                    </div>
+                    
+                    <div class="agent-cta">
+                        <span data-i18n="index.agent.meetia.cta">Bientôt disponible</span>
+                    </div>
+                </a>
+
+                <!-- KINÉSIA - ARRIVE BIENTÔT -->
+                <div class="agent-card kinesia" style="cursor: default; opacity: 0.9;">
+                    <div class="agent-header">
+                        <div class="agent-icon">🏥</div>
+                        <div>
+                            <h3 class="agent-name" data-i18n="index.agent.kinesia.name">Kinesia</h3>
+                            <p class="agent-tagline" data-i18n="index.agent.kinesia.tagline">Consultations kiné structurées</p>
+                        </div>
+                    </div>
+                    
+                    <p class="agent-description" data-i18n="index.agent.kinesia.desc">
+                        Agent spécialisé pour les kinésithérapeutes : dictez vos consultations, obtenez un bilan structuré prêt à partager.
+                    </p>
+                    
+                    <div class="agent-features">
+                        <div class="agent-feature">
+                            <span class="agent-feature-icon">✓</span>
+                            <span data-i18n="index.agent.kinesia.feature1">Vocabulaire médical spécialisé</span>
+                        </div>
+                        <div class="agent-feature">
+                            <span class="agent-feature-icon">✓</span>
+                            <span data-i18n="index.agent.kinesia.feature2">Bilan kiné professionnel</span>
+                        </div>
+                        <div class="agent-feature">
+                            <span class="agent-feature-icon">✓</span>
+                            <span data-i18n="index.agent.kinesia.feature3">Conformité RGPD santé</span>
+                        </div>
+                    </div>
+                    
+                    <div style="padding: var(--space-md) var(--space-lg); background: var(--kinesia-light); color: var(--kinesia-primary); text-align: center; border-radius: var(--radius); font-weight: var(--font-semibold); font-size: var(--text-base);">
+                        <span data-i18n="index.agent.kinesia.cta">🔜 Bientôt disponible</span>
+                    </div>
+                </div>
+
+                <!-- PROCHAIN BOT -->
+                <div class="agent-card" style="cursor: default; opacity: 0.9; border: 2px dashed var(--gray-300);">
+                    <div class="agent-header">
+                        <div class="agent-icon">🚀</div>
+                        <div>
+                            <h3 class="agent-name" style="color: var(--kinesia-primary);" data-i18n="index.agent.next.name">Votre prochain bot</h3>
+                            <p class="agent-tagline" data-i18n="index.agent.next.tagline">Arrive bientôt !</p>
+                        </div>
+                    </div>
+                    
+                    <p class="agent-description" data-i18n="index.agent.next.desc">
+                        Nous travaillons sur un nouvel agent IA spécialisé qui rejoindra bientôt la famille BOOSTLY. Restez connecté pour découvrir cette nouveauté en avant-première.
+                    </p>
+                    
+                    <div class="agent-features">
+                        <div class="agent-feature">
+                            <span class="agent-feature-icon">🔔</span>
+                            <span data-i18n="index.agent.next.feature1">En cours de développement</span>
+                        </div>
+                        <div class="agent-feature">
+                            <span class="agent-feature-icon">✨</span>
+                            <span data-i18n="index.agent.next.feature2">Innovation en préparation</span>
+                        </div>
+                        <div class="agent-feature">
+                            <span class="agent-feature-icon">🎯</span>
+                            <span data-i18n="index.agent.next.feature3">Spécialisé pour un nouveau métier</span>
+                        </div>
+                    </div>
+                    
+                    <div style="padding: var(--space-md) var(--space-lg); background: var(--kinesia-light); color: var(--kinesia-primary); text-align: center; border-radius: var(--radius); font-weight: var(--font-semibold); font-size: var(--text-base);">
+                        <span data-i18n="index.agent.next.cta">🔜 Bientôt disponible</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- POURQUOI BOOSTLY -->
+    <section class="problem-section section-gray" style="background: var(--gray-50);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="index.why.title">Pourquoi BOOSTLY ?</h2>
+            </div>
+            
+            <div class="agents-grid" style="margin-top: var(--space-3xl);">
+                <div style="padding: var(--space-xl); background: var(--gray-50); border-radius: var(--radius-lg); border: 1px solid var(--gray-200);">
+                    <div style="font-size: 32px; margin-bottom: var(--space-md);">🎯</div>
+                    <h3 style="font-size: var(--text-xl); font-weight: var(--font-semibold); margin-bottom: var(--space-sm);" data-i18n="index.why.card1.title">Spécialisés par métier</h3>
+                    <p style="color: var(--gray-600);" data-i18n="index.why.card1.desc">Pas d'IA générique. Chaque agent est entraîné pour un cas d'usage précis avec du vocabulaire métier.</p>
+                </div>
+                
+                <div style="padding: var(--space-xl); background: var(--gray-50); border-radius: var(--radius-lg); border: 1px solid var(--gray-200);">
+                    <div style="font-size: 32px; margin-bottom: var(--space-md);">🔗</div>
+                    <h3 style="font-size: var(--text-xl); font-weight: var(--font-semibold); margin-bottom: var(--space-sm);" data-i18n="index.why.card2.title">Intégrations natives</h3>
+                    <p style="color: var(--gray-600);" data-i18n="index.why.card2.desc">Connectez vos outils existants : CRM, Google Drive, Notion, Slack. Vos données restent synchronisées.</p>
+                </div>
+                
+                <div style="padding: var(--space-xl); background: var(--gray-50); border-radius: var(--radius-lg); border: 1px solid var(--gray-200);">
+                    <div style="font-size: 32px; margin-bottom: var(--space-md);">📊</div>
+                    <h3 style="font-size: var(--text-xl); font-weight: var(--font-semibold); margin-bottom: var(--space-sm);" data-i18n="index.why.card3.title">Données structurées</h3>
+                    <p style="color: var(--gray-600);" data-i18n="index.why.card3.desc">L'IA ne génère pas que du texte : elle structure les informations pour une exploitation immédiate.</p>
+                </div>
+                
+                <div style="padding: var(--space-xl); background: var(--gray-50); border-radius: var(--radius-lg); border: 1px solid var(--gray-200);">
+                    <div style="font-size: 32px; margin-bottom: var(--space-md);">🔒</div>
+                    <h3 style="font-size: var(--text-xl); font-weight: var(--font-semibold); margin-bottom: var(--space-sm);" data-i18n="index.why.card4.title">Sécurité & confidentialité</h3>
+                    <p style="color: var(--gray-600);" data-i18n="index.why.card4.desc">Hébergement européen, chiffrement de bout en bout, conformité RGPD. Vos données vous appartiennent.</p>
+                </div>
+                
+                <div style="padding: var(--space-xl); background: var(--gray-50); border-radius: var(--radius-lg); border: 1px solid var(--gray-200);">
+                    <div style="font-size: 32px; margin-bottom: var(--space-md);">⚡</div>
+                    <h3 style="font-size: var(--text-xl); font-weight: var(--font-semibold); margin-bottom: var(--space-sm);" data-i18n="index.why.card5.title">Rapide & fiable</h3>
+                    <p style="color: var(--gray-600);" data-i18n="index.why.card5.desc">Résultats en moins de 30 secondes. Infrastructure cloud scalable pour une disponibilité 99.9%.</p>
+                </div>
+                
+                <div style="padding: var(--space-xl); background: var(--gray-50); border-radius: var(--radius-lg); border: 1px solid var(--gray-200);">
+                    <div style="font-size: 32px; margin-bottom: var(--space-md);">💎</div>
+                    <h3 style="font-size: var(--text-xl); font-weight: var(--font-semibold); margin-bottom: var(--space-sm);" data-i18n="index.why.card6.title">Plans flexibles</h3>
+                    <p style="color: var(--gray-600);" data-i18n="index.why.card6.desc">Commencez gratuitement, évoluez vers PRO selon vos besoins. Sans engagement, annulez quand vous voulez.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2 class="final-cta-title" data-i18n="index.cta.title">Prêt à récupérer des heures chaque semaine ?</h2>
+            <p class="final-cta-subtitle" data-i18n="index.cta.subtitle">
+                Rejoignez les professionnels qui ont adopté l'IA pour automatiser leurs tâches répétitives
+            </p>
+            <a href="#agents" class="final-cta-button">
+                <span data-i18n="index.cta.button">Choisir votre agent</span>
+                <span>→</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <span>🤖</span>
+                    <span class="gradient-text">BOOSTLY AI</span>
+                </div>
+                <p class="footer-tagline" data-i18n="common.footer.tagline">
+                    La suite d'agents IA spécialisés qui automatise vos tâches répétitives.
+                </p>
+            </div>
+            
+            <div class="footer-section">
+                <h4 data-i18n="common.footer.products">Produits</h4>
+                <a href="vocalia.html">Vocalia</a>
+                <a href="meetia.html">Meetia</a>
+            </div>
+
+            <div class="footer-section">
+                <h4 data-i18n="common.footer.support">Support</h4>
+                <a href="faq.html" data-i18n="common.nav.faq">FAQ</a>
+                <a href="mailto:contact@boostly.ai" data-i18n="common.footer.contact">Contact</a>
+            </div>
+
+            <div class="footer-section">
+                <h4 data-i18n="common.footer.legal">Légal</h4>
+                <a href="privacy.html" data-i18n="common.footer.privacy">Confidentialité</a>
+                <a href="terms.html" data-i18n="common.footer.terms">CGU</a>
+                <a href="legal.html" data-i18n="common.footer.mentions">Mentions légales</a>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p data-i18n="common.footer.copyright">&copy; 2025 BOOSTLY AI. Tous droits réservés.</p>
+            <p data-i18n="common.footer.made">Fait avec ❤️ en France</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="js/translations-vitrine.js"></script>
+    <script src="js/language-manager-vitrine.js"></script>
+    <script>
+        // Initialisation du language manager
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialiser et charger la langue
+            const currentLang = window.languageManager.init();
+            
+            // Mettre à jour l'UI avec la langue détectée
+            window.languageManager.updateUI();
+            
+            console.log('✅ Site chargé en', currentLang);
+        });
+        
+        // Smooth scroll pour les liens d'ancrage
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior:'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

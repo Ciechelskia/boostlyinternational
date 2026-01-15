@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Questions Fréquentes | VOCALIA</title>
+    <meta name="description" content="Trouvez rapidement des réponses à vos questions sur VOCALIA - Génération automatique de rapports commerciaux par IA">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/boostly.css">
+    <link rel="stylesheet" href="css/legal-pages.css">
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav class="boostly-nav">
+        <div class="nav-content">
+            <a href="index.html" class="nav-logo">
+                <span class="nav-logo-icon">🤖</span>
+                <span class="gradient-text">BOOSTLY AI</span>
+            </a>
+
+            <div class="nav-products">
+                <a href="vocalia.html" class="product-nav-link vocalia">Vocalia</a>
+                <a href="meetia.html" class="product-nav-link meetia">Meetia</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="faq.html" style="text-decoration: none; color: var(--gray-700); font-size: var(--text-sm);" data-i18n="common.nav.faq">FAQ</a>
+
+                <!-- Sélecteur de langue -->
+                <div class="language-selector-vitrine">
+                    <button class="language-btn-vitrine" id="currentLanguageBtnVitrine" onclick="toggleLanguageDropdownVitrine()">
+                        <span id="currentFlagVitrine">🇫🇷</span>
+                        <span id="currentLangCodeVitrine">FR</span>
+                        <span class="arrow">▼</span>
+                    </button>
+
+                    <div class="language-dropdown-vitrine" id="languageDropdownVitrine" style="display: none;">
+                        <button class="lang-option-vitrine" onclick="changeLanguageVitrine('fr')">
+                            🇫🇷 <span>Français</span>
+                        </button>
+                        <button class="lang-option-vitrine" onclick="changeLanguageVitrine('en')">
+                            🇬🇧 <span>English</span>
+                        </button>
+                        <button class="lang-option-vitrine" onclick="changeLanguageVitrine('cn')">
+                            🇨🇳 <span>中文</span>
+                        </button>
+                        <button class="lang-option-vitrine" onclick="changeLanguageVitrine('jp')">
+                            🇯🇵 <span>日本語</span>
+                        </button>
+                    </div>
+                </div>
+
+                <a href="../VOCALIA international /app.html" class="btn-demo" data-i18n="common.nav.login">Connexion</a>
+                <a href="../VOCALIA international /app.html" class="btn-demo" data-i18n="common.nav.start">Commencer</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <div class="faq-container">
+        <div class="legal-header">
+            <h1 class="legal-title" data-i18n="faq.header.title">Questions Fréquentes</h1>
+            <p class="legal-subtitle" data-i18n="faq.header.subtitle">Trouvez rapidement des réponses à vos questions</p>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="faq-search">
+            <input type="text" class="search-input" id="faq-search" data-i18n-placeholder="faq.search.placeholder" placeholder="Rechercher une question...">
+        </div>
+
+        <!-- Categories -->
+        <div class="faq-categories">
+            <div class="category-card active" data-category="all">
+                <div class="category-icon">📚</div>
+                <div class="category-name" data-i18n="faq.category.all">Toutes</div>
+                <div class="category-count" data-i18n="faq.category.all.count">18 questions</div>
+            </div>
+            <div class="category-card" data-category="pricing">
+                <div class="category-icon">💰</div>
+                <div class="category-name" data-i18n="faq.category.pricing">Abonnement</div>
+                <div class="category-count" data-i18n="faq.category.pricing.count">6 questions</div>
+            </div>
+            <div class="category-card" data-category="usage">
+                <div class="category-icon">🎤</div>
+                <div class="category-name" data-i18n="faq.category.usage">Utilisation</div>
+                <div class="category-count" data-i18n="faq.category.usage.count">5 questions</div>
+            </div>
+            <div class="category-card" data-category="reports">
+                <div class="category-icon">📊</div>
+                <div class="category-name" data-i18n="faq.category.reports">Rapports</div>
+                <div class="category-count" data-i18n="faq.category.reports.count">4 questions</div>
+            </div>
+            <div class="category-card" data-category="security">
+                <div class="category-icon">🔒</div>
+                <div class="category-name" data-i18n="faq.category.security">Sécurité</div>
+                <div class="category-count" data-i18n="faq.category.security.count">3 questions</div>
+            </div>
+        </div>
+
+        <!-- FAQ Items -->
+        <div class="faq-list">
+            
+            <!-- ========== ABONNEMENT & TARIFS ========== -->
+            
+            <div class="faq-item" data-category="pricing">
+                <div class="faq-question">
+                    <span class="faq-question-text" data-i18n="faq.pricing.q1">Quelle est la différence entre le plan FREE et PRO ?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content" data-i18n="faq.pricing.a1">
+                        <strong>Plan FREE :</strong> 5 rapports par mois, 2 appareils maximum, toutes les fonctionnalités de base (enregistrement, transcription, PDF).
+                        <br><br>
+                        <strong>Plan PRO (14,99€/mois) :</strong> Rapports illimités, 2 appareils maximum, organisation par dossiers illimités, export PDF avancé, support prioritaire.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="pricing">
+                <div class="faq-question">
+                    <span class="faq-question-text" data-i18n="faq.pricing.q2">Combien coûte VOCALIA ?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content" data-i18n="faq.pricing.a2">
+                        VOCALIA est <strong>gratuit jusqu'à 5 rapports par mois</strong>. Le plan PRO coûte <strong>14,99€/mois</strong> et offre des rapports illimités ainsi que toutes les fonctionnalités avancées. Aucun engagement, résiliable à tout moment.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="pricing">
+                <div class="faq-question">
+                    <span class="faq-question-text" data-i18n="faq.pricing.q3">Comment fonctionne la limite de 5 rapports du plan FREE ?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content" data-i18n="faq.pricing.a3">
+                        Votre compteur se réinitialise automatiquement <strong>le jour anniversaire de votre inscription</strong> chaque mois. Par exemple, si vous vous êtes inscrit le 15 du mois, vos 5 rapports gratuits se renouvellent chaque 15 du mois. Une fois la limite atteinte, vous pouvez upgrader vers PRO pour continuer.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="pricing">
+                <div class="faq-question">
+                    <span class="faq-question-text" data-i18n="faq.pricing.q4">Puis-je passer du plan FREE au plan PRO à tout moment ?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content" data-i18n="faq.pricing.a4">
+                        Oui, absolument ! Vous pouvez upgrader instantanément depuis votre profil en cliquant sur "Passer au plan PRO". Le changement est immédiat et vous bénéficiez de rapports illimités dès le paiement effectué via Stripe.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="pricing">
+                <div class="faq-question">
+                    <span class="faq-question-text" data-i18n="faq.pricing.q5">Puis-je annuler mon abonnement PRO à tout moment ?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content" data-i18n="faq.pricing.a5">
+                        Oui, vous pouvez annuler à tout moment depuis vos paramètres de profil. L'annulation prend effet <strong>à la fin de votre période de facturation en cours</strong>. Vous gardez l'accès aux fonctionnalités PRO jusqu'à cette date, puis vous repassez automatiquement au plan FREE (5 rapports/mois).
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="pricing">
+                <div class="faq-question">
+                    <span class="faq-question-text" data-i18n="faq.pricing.q6">Que se passe-t-il avec mes rapports si je repasse au plan FREE ?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content" data-i18n="faq.pricing.a6">
+                        Tous vos rapports existants restent accessibles en consultation et téléchargement PDF. Vos dossiers sont conservés mais vous ne pourrez plus en créer de nouveaux. Vous ne pourrez générer que 5 nouveaux rapports par mois jusqu'à ce que vous repassiez PRO.
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== UTILISATION & ENREGISTREMENT ========== -->
+
+            <div class="faq-item" data-category="usage">
+                <div class="faq-question">
+                    <span class="faq-question-text" data-i18n="faq.usage.q1">Comment créer mon premier rapport ?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content" data-i18n="faq.usage.a1">
+                        C'est très simple :
+                        <br>1. Connectez-vous à votre compte VOCALIA
+                        <br>2. Cliquez sur "Nouveau rapport"
+                        <br>3. Cliquez sur le bouton micro et parlez (ou importez un fichier audio)
+                        <br>4. Cliquez sur "Envoyer" une fois terminé
+                        <br>5. L'IA génère votre rapport PDF en 30 secondes !
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="usage">
+                <div class="faq-question">
+                    <span class="faq-question-text" data-i18n="faq.usage.q2">Quelle est la durée maximum d'enregistrement ?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content" data-i18n="faq.usage.a2">
+                        Vous pouvez enregistrer jusqu'à <strong>10 minutes par rapport</strong> (plan FREE et PRO). Pour des besoins spécifiques nécessitant des enregistrements plus longs, contactez-nous pour discuter d'une solution entreprise personnalisée.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="usage">
+                <div class="faq-question">
+                    <span class="faq-question-text" data-i18n="faq.usage.q3">Puis-je utiliser VOCALIA hors ligne ?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content" data-i18n="faq.usage.a3">
+                        Non, VOCALIA nécessite une connexion Internet pour transcrire et générer vos rapports via l'IA. Cependant, vous pouvez consulter vos rapports déjà générés même hors ligne une fois qu'ils sont téléchargés en PDF.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="usage">
+                <div class="faq-question">
+                    <span class="faq-question-text" data-i18n="faq.usage.q4">Sur combien d'appareils puis-je utiliser VOCALIA ?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content" data-i18n="faq.usage.a4">
+                        Vous pouvez utiliser VOCALIA sur <strong>maximum 2 appareils simultanément</strong> (FREE et PRO). Si vous essayez de vous connecter sur un 3ème appareil, vous serez automatiquement déconnecté du plus ancien appareil. Cette limite de sécurité empêche le partage de compte.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="usage">
+                <div class="faq-question">
+                    <span class="faq-question-text" data-i18n="faq.usage.q5">Puis-je importer un fichier audio au lieu d'enregistrer en direct ?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content" data-i18n="faq.usage.a5">
+                        Oui ! Vous pouvez importer des fichiers audio au format <strong>MP3, WAV, M4A ou WEBM</strong> (max 10 minutes). Cliquez sur "Importer un fichier audio" au lieu du bouton micro, sélectionnez votre fichier, et l'IA le traitera exactement comme un enregistrement direct.
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== RAPPORTS & DOSSIERS ========== -->
+
+            <div class="faq-item" data-category="reports">
+                <div class="faq-question">
+                    <span class="faq-question-text" data-i18n="faq.reports.q1">Puis-je modifier un rapport après sa génération ?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content" data-i18n="faq.reports.a1">
+                        Actuellement, vous ne pouvez pas modifier le contenu d'un rapport déjà généré. Cependant, vous pouvez :
+                        <br>• Renommer le rapport
+                        <br>• Le déplacer dans un autre dossier (PRO)
+                        <br>• Le supprimer et en recréer un nouveau
+                        <br><br>
+                        La fonction d'édition de contenu arrive prochainement !
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="reports">
+                <div class="faq-question">
+                    <span class="faq-question-text" data-i18n="faq.reports.q2">Comment fonctionnent les dossiers (plan PRO) ?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content" data-i18n="faq.reports.a2">
+                        Les dossiers vous permettent d'organiser vos rapports par client, projet ou période. En plan PRO, vous pouvez :
+                        <br>• Créer un nombre illimité de dossiers
+                        <br>• Renommer et supprimer vos dossiers
+                        <br>• Déplacer des rapports entre dossiers
+                        <br>• Rechercher rapidement dans tous vos rapports
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="reports">
+                <div class="faq-question">
+                    <span class="faq-question-text" data-i18n="faq.reports.q3">Combien de temps mes rapports sont-ils conservés ?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content" data-i18n="faq.reports.a3">
+                        Vos rapports sont conservés <strong>indéfiniment</strong> tant que votre compte est actif. Même si vous repassez du plan PRO au FREE, tous vos rapports existants restent accessibles. Seule la suppression manuelle de votre compte entraîne la suppression définitive de vos données.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="reports">
+                <div class="faq-question">
+                    <span class="faq-question-text" data-i18n="faq.reports.q4">Puis-je partager mes rapports avec d'autres personnes ?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content" data-i18n="faq.reports.a4">
+                        Oui, vous pouvez télécharger vos rapports au format <strong>PDF</strong> et les partager par email, Google Drive, Dropbox ou tout autre moyen. Les rapports PDF sont formatés professionnellement et prêts à être partagés avec vos clients ou votre équipe.
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== SÉCURITÉ & CONFIDENTIALITÉ ========== -->
+
+            <div class="faq-item" data-category="security">
+                <div class="faq-question">
+                    <span class="faq-question-text" data-i18n="faq.security.q1">Mes données sont-elles sécurisées ?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content" data-i18n="faq.security.a1">
+                        Absolument. VOCALIA utilise :
+                        <br>• <strong>Chiffrement SSL/TLS</strong> pour toutes les communications
+                        <br>• <strong>Hébergement européen</strong> (Supabase) conforme RGPD
+                        <br>• <strong>Authentification sécurisée</strong> avec tokens
+                        <br>• <strong>Limite de 2 appareils</strong> pour éviter le partage de compte
+                        <br><br>
+                        Vos enregistrements et rapports ne sont accessibles que par vous.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="security">
+                <div class="faq-question">
+                    <span class="faq-question-text" data-i18n="faq.security.q2">Que faites-vous de mes enregistrements audio ?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content" data-i18n="faq.security.a2">
+                        Vos fichiers audio sont stockés de manière sécurisée dans Supabase Storage et utilisés <strong>uniquement pour générer vos rapports</strong>. Nous ne les utilisons jamais pour entraîner des modèles IA, ni ne les partageons avec des tiers. Vous pouvez supprimer vos enregistrements à tout moment.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="security">
+                <div class="faq-question">
+                    <span class="faq-question-text" data-i18n="faq.security.q3">Puis-je supprimer mon compte et toutes mes données ?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content" data-i18n="faq.security.a3">
+                        Oui, vous pouvez supprimer votre compte à tout moment depuis vos paramètres. Cette action est <strong>définitive et irréversible</strong> : tous vos rapports, enregistrements, dossiers et données personnelles seront supprimés dans les 48h. Assurez-vous de télécharger vos rapports importants avant.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Contact Section -->
+        <div class="faq-contact">
+            <div class="faq-contact-card">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">💬</div>
+                <h3 style="margin-bottom: 1rem; font-size: 1.5rem;" data-i18n="faq.contact.title">Une autre question ?</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 1.5rem;" data-i18n="faq.contact.description">
+                    Notre équipe est là pour vous aider. Contactez-nous et nous vous répondrons dans les 24h.
+                </p>
+                <a href="mailto:contact@boostly.ai" class="btn-contact" data-i18n="faq.contact.button">Nous contacter</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <!-- Section VOCALIA -->
+                <div class="footer-section">
+                    <h4 class="nav-title-gradient">VOCALIA</h4>
+                    <p style="color: var(--text-secondary); margin-top: 0.5rem;" data-i18n="footer.description">
+                        Transformez vos visites commerciales en rapports professionnels grâce à l'IA.
+                    </p>
+                </div>
+
+                <!-- Section Produit -->
+                <div class="footer-section">
+                    <h4 data-i18n="footer.product">Produit</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#features" data-i18n="footer.features">Fonctionnalités</a></li>
+                        <li><a href="index.html#pricing" data-i18n="footer.pricing">Tarifs</a></li>
+                        <li><a href="faq.html" data-i18n="footer.faq">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Section Légal -->
+                <div class="footer-section">
+                    <h4 data-i18n="footer.legal">Légal</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html" data-i18n="footer.privacy">Confidentialité</a></li>
+                        <li><a href="terms.html" data-i18n="footer.terms">CGU</a></li>
+                        <li><a href="legal.html" data-i18n="footer.legal_mentions">Mentions légales</a></li>
+                    </ul>
+                </div>
+
+                <!-- Section Contact -->
+                <div class="footer-section">
+                    <h4 data-i18n="footer.contact">Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:contact@boostly.ai">contact@boostly.ai</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p data-i18n="footer.copyright">© 2025 VOCALIA by BOOSTLY AI. Tous droits réservés.</p>
+                <p data-i18n="footer.made_in">Fait avec ❤️ en France</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Fonctionnalité d'accordéon FAQ
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const isActive = item.classList.contains('active');
+                
+                // Fermer tous les autres items
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                
+                // Toggle l'item cliqué
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Filtrage par catégorie
+        document.querySelectorAll('.category-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const category = card.dataset.category;
+                
+                // Mise à jour de la carte active
+                document.querySelectorAll('.category-card').forEach(c => c.classList.remove('active'));
+                card.classList.add('active');
+                
+                // Filtrage des questions
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    if (category === 'all' || item.dataset.category === category) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Recherche dans la FAQ
+        const searchInput = document.getElementById('faq-search');
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            
+            document.querySelectorAll('.faq-item').forEach(item => {
+                const questionText = item.querySelector('.faq-question-text').textContent.toLowerCase();
+                const answerText = item.querySelector('.faq-answer-content').textContent.toLowerCase();
+                
+                if (questionText.includes(searchTerm) || answerText.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+            
+            // Réinitialiser le filtre de catégorie si une recherche est active
+            if (searchTerm) {
+                document.querySelectorAll('.category-card').forEach(c => c.classList.remove('active'));
+            } else {
+                document.querySelector('.category-card[data-category="all"]').classList.add('active');
+            }
+        });
+
+        // Menu mobile toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (menuToggle) {
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                menuToggle.classList.toggle('active');
+            });
+        }
+    </script>
+
+    <!-- i18n System -->
+    <script src="js/translations-vitrine.js"></script>
+    <script src="js/language-manager-vitrine.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialiser le système de langue
+            const currentLang = window.languageManager.init();
+            window.languageManager.updateUI();
+
+            console.log('✅ FAQ chargé en', currentLang);
+        });
+    </script>
+</body>
+</html>
