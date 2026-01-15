@@ -134,7 +134,7 @@ class LanguageManager {
         // 1. Éléments avec data-i18n
         document.querySelectorAll('[data-i18n]').forEach(element => {
             const key = element.getAttribute('data-i18n');
-            element.innerHTML = this.t(key);
+            element.textContent = this.t(key);
         });
 
         // 2. Placeholders

@@ -1,0 +1,8 @@
+# Netlify Redirects
+# Documentation: https://docs.netlify.com/routing/redirects/
+
+# Redirect racine vers index.html
+/    /index.html    200
+
+# 404 - Toutes les pages non trouvées vers index.html
+/*   /index.html    404

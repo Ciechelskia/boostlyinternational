@@ -1,0 +1,27 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Fichiers de backup
+*.backup
+*.bak
+*.tmp
+
+# Logs
+*.log
+npm-debug.log*
+
+# Fichiers de documentation temporaires
+*.md.tmp
+PRIVACY_TRANSLATION_REPORT.md
+
+# Netlify
+.netlify/

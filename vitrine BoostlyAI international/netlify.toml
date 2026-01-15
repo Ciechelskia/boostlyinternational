@@ -1,0 +1,50 @@
+# Configuration Netlify pour BoostlyAI International
+# Documentation: https://docs.netlify.com/configure-builds/file-based-configuration/
+
+[build]
+  # Dossier à publier (racine du projet)
+  publish = "."
+
+  # Commande de build (vide car site statique HTML/CSS/JS)
+  command = ""
+
+# Redirection racine vers index.html
+[[redirects]]
+  from = "/"
+  to = "/index.html"
+  status = 200
+  force = false
+
+# Headers de sécurité et performance
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Cache pour les assets statiques (CSS, JS, images)
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Redirections pour gérer les erreurs 404
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 404
+  force = false
+
+# Redirection du domaine principal (si vous avez un custom domain)
+# [[redirects]]
+#   from = "https://www.votredomaine.com/*"
+#   to = "https://votredomaine.com/:splat"
+#   status = 301
+#   force = true
